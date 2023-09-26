@@ -2,7 +2,7 @@ import textwrap
 
 def menu():
     menu = """\n
-    ==============================   MENU  ============================
+       MENU  
     [d]\tDepositar
     [s]\tSacar
     [e]\tExtrato
@@ -10,7 +10,7 @@ def menu():
     [nu]\tNovo Usuario
     [nc]\tNova Conta
     [lc]\tLista de contas
-    ===================================================================
+    
     Comando => """
     return input(textwrap.dedent(menu))
         
@@ -53,10 +53,10 @@ def saque(*, saldo, valor, extrato, limite, numero_saques, limite_saques):
     return saldo, extrato
 
 def imprimir_extrato(saldo, /, *, extrato):
-    print("============================== EXTRATO ==============================")
+    print(" EXTRATO ")
     print("Não foram realizadas movimentações na conta." if not extrato else extrato)
     print(f"\nSaldo: R$ {saldo:.2f}")
-    print("=====================================================================")
+    print("")
 
 def criar_usuario(usuarios):
 
